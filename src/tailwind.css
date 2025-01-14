@@ -9,6 +9,9 @@
     h2{
         @apply text-3xl text-center font-semibold;
     }
+    hr{
+        @apply border border-dark-100 dark:border-light-100 my-4;
+    }
 }
 
 @layer utilities{
@@ -33,6 +36,9 @@
   }
   .btn-warning{
     @apply bg-yellow-500 text-white;
+  }
+  .btn-danger{
+    @apply bg-red-500 text-white;
   }
 
   .popular-courses{
