@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    h1{
+        @apply text-4xl text-center font-semibold;
+    }
+    h2{
+        @apply text-3xl text-center font-semibold;
+    }
+}
+
+@layer utilities{
+    body{
+        @apply bg-light-100 dark:bg-dark-100 text-dark-100 dark:text-light-100 transition-colors duration-500;
+    }
+    nav{
+        @apply my-8 flex flex-col lg:flex-row justify-evenly gap-4 items-center;
+    }
+}
+
+@layer components {
+  .btn{
+    @apply inline-block py-2 w-[200px] rounded font-semibold text-center;
+  }
+  .btn:hover{
+    @apply scale-110
+  }
+
+  .btn-primary{
+    @apply bg-blue-500 text-white;
+  }
+  .btn-warning{
+    @apply bg-yellow-500 text-white;
+  }
+
+  .popular-courses{
+    @apply w-4/5 mx-auto flex flex-col lg:flex-row gap-4 lg:overflow-x-auto;
+  }
+  .course-card{
+    @apply py-4 flex flex-col items-center justify-center gap-2 min-w-[300px];
+  }
+  .course-image{
+    @apply w-[300px] rounded;
+  }
+  .course-info{
+    @apply flex flex-col gap-2 items-center justify-center;
+  }
+  .course-title{
+    @apply text-xl font-semibold;
+  }
+  .course-desc{
+    @apply tracking-wide;
+  }
+}
